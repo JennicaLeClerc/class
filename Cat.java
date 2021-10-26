@@ -1,3 +1,10 @@
+// Access Modifiers
+//		global    package    subclass    class
+// public       x         x          x           x
+// default                x          x           x
+// protected                         x           x
+// private                                       x
+
 public class Cat{ //class delaration
 	String name = "Tom";
 	double weight = 15;
@@ -8,8 +15,8 @@ public class Cat{ //class delaration
 	String owner;
 	String color = "Blue/Grey";
 
-	public static void main(String[] args){
-		Cat newCat = new Cat(); //object instantiation
+	/*public static void main(String[] args){
+		Cat newCat = new Cat(); //object instantiation 
 		Cat newCat1; // object declaration
 
 		newCat1 = newCat; // object assignment
@@ -20,6 +27,20 @@ public class Cat{ //class delaration
 		newCat.eat();
 		newCat.eat();
 		System.out.println("Cat ate a bit... \n" + "New Weight:  " + newCat.weight + " lbs");
+	}*/
+	
+	// method overloading -- This allows you to keep the Cat() that doesn't have a pointer
+	public Cat(){
+	}
+
+	public Cat(String name){
+		this.name = name;
+	}
+
+	// When you overload the different classes with the same name cannot contain all the same objects in the same order
+	public Cat(String name, int age){
+		this.name = name;
+		this.age = age;
 	}
 
 	public int getAge(){
@@ -62,9 +83,9 @@ public class Cat{ //class delaration
 	}
 
 	public Cat breed(){
-		Cat newCat = new Cat();
+		Cat newCat = new Cat(); 
 		return newCat;
-	}
+	} 
 
 	public void copyCat(Cat catToCopy){
 		this.name = catToCopy.getName();
