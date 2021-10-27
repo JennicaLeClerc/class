@@ -16,16 +16,27 @@
 	%	modulous - gives remainder ( 3%2 = 1 --> 3/2 = 1 R 1)
 	()	orders
 ### Logical
-	&&	
-	||
+	&&	AND with short circuiting (stops when a false if reached)
+	||	OR  with short circuiting (stops when one is true)
 ### Bitwise
 		true	false
-	&	both	one
-	|	one	both
-	^	one	both	- exclusive or (one has to be true and one false for this to be true, if both are true or both are false it will pass false) 
+	&	both	one		- AND (looks at all conditions even if a false is already reached)
+	|	one	both		- OR (looks at all conditions even if you already hit a true)
+	^	either but not both	- EXCULUSIVE OR (one has to be true and one false for this to be true, if both are true or both are false it will pass false) 
+### Unary
+	!	negation	ex. boolean b = true; !b = false;
+	++	increment, equivalent to += 1
+	--	deincrement, equivalent to -= 1
 ### Ternary
 	?	ex. x == 5 ? code to execute if true : code to execute if false;
+		ex. z == 5 || y == 6 ? print(true) : print(false);
 ### Assignment
-	=
+	=	assign a value to a location in memory (a variable)
 	+=
 	-=
+	/=
+	*=
+	%=
+		ex. this.age = this.age + 5; ===> this.age += 5;
+		ex. this.age += 1; this.age++; post-increment
+		ex. ++this.age; pre-increment
